@@ -1,32 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Losa - Coming Soon</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Losa - Coming Soon</title>
+  
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* BODY */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #000 0%, #333 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* TITLE */
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    /* SUBTITLE */
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    /* COMING SOON BADGE */
+    .coming-soon {
+      font-size: 1.3rem;
+      font-weight: 700;
+      border: 2px solid #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: default;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2.5s ease-in-out forwards;
+      animation-delay: 0.6s;
+    }
+    .coming-soon:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* FADE-IN KEYFRAME */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* OPTIONAL ANIMATED BACKGROUND OVERLAY */
+    .animated-bg {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: url('https://source.unsplash.com/1600x900/?abstract,dark');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+      z-index: -1;
+      animation: moveBg 10s linear infinite;
+    }
+
+    @keyframes moveBg {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-20%, -20%);
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Losa</h1>
-    <p>A New Way of Defining Convenience</p>
-    <p>Coming Soon</p>
+  <!-- OPTIONAL Background Overlay (Remove if not needed) -->
+  <div class="animated-bg"></div>
+
+  <h1>Losa</h1>
+  <p class="subtitle">A New Way of Defining Convenience</p>
+  <div class="coming-soon">Coming Soon</div>
 </body>
 </html>
